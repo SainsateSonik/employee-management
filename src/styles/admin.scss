@@ -1,0 +1,51 @@
+@import "../ref/var.scss";
+
+.dashboard__admin {
+  width: 100%;
+  overflow-y: scroll;
+
+  .employee-record {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    position: relative;
+
+    & > div {
+      width: 20%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 98%;
+      border-bottom: 1px solid #eee;
+    }
+  }
+
+  .record__title {
+    width: 100%;
+    background-color: #333;
+    padding: 10px 50px;
+    color: #eee;
+    border-radius: 10px;
+
+    &::after {
+      border-bottom: none;
+    }
+  }
+
+  .alert {
+    position: absolute;
+    z-index: 1000;
+    color: #fff;
+    font-size: 0.8em;
+    padding: 15px 20px;
+    top: 4rem;
+    right: 10px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+  }
+}

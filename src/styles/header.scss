@@ -1,0 +1,44 @@
+@import "../ref/var.scss";
+
+header {
+  width: 100%;
+  height: $header-height;
+  background: #fff;
+  padding: 0 $app-padding;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1000;
+
+  nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .brand {
+      font-size: 1.1em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #555;
+      cursor: default;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      color: #777;
+
+      li {
+        cursor: pointer;
+
+        &:hover {
+          color: rgb(30, 21, 110);
+        }
+      }
+
+      li ~ li {
+        padding-left: 30px;
+      }
+    }
+  }
+}

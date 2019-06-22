@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+import Header from "./component/header/Header";
+import Main from "./component/main/Main";
+import { userTypes } from "./ref/userTypes";
+import Footer from "./component/footer/Footer";
 
 function App() {
+  const [userType] = useState(userTypes.EMPLOYEE);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header userType={userType} />
+      <Main userType={userType} />
+      <Footer />
     </div>
   );
 }
